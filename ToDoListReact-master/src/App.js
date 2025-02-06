@@ -5,21 +5,21 @@ function App() {
   const [newTodo, setNewTodo] = useState("");
   const [todos, setTodos] = useState([]);
 
-  // async function getTodos() {
-  //   const todos = await service.getTasks();
-  //   console.log("Response from server:", todos);
-  //   setTodos(todos);
-  // }
-
   async function getTodos() {
-    try {
-      const todosResponse = await service.getTasks();
-      console.log("Response from server:", todosResponse);
-      setTodos(Array.isArray(todosResponse) ? todosResponse : []);
-    } catch (error) {
-      console.error("Error fetching todos:", error);
-    }
+    const todos = await service.getTasks();
+    console.log("Response from server:", todos);
+    setTodos(todos);
   }
+
+  // async function getTodos() {
+  //   try {
+  //     const todosResponse = await service.getTasks();
+  //     console.log("Response from server:", todosResponse);
+  //     setTodos(Array.isArray(todosResponse) ? todosResponse : []);
+  //   } catch (error) {
+  //     console.error("Error fetching todos:", error);
+  //   }
+  // }
   async function createTodo(e) {
     e.preventDefault();
     await service.addTask(newTodo);
