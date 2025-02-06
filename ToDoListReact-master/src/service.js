@@ -1,15 +1,16 @@
 
 import axios from 'axios';
-const apiUrl = process.env.REACT_APP_API_URL;
+// const apiUrl = process.env.REACT_APP_API_URL;
+axios.defaults.baseURL =process.env.REACT_APP_API_URL;
 console.log('API URL:', apiUrl);
 console.log("AAA");
 
-const apiClient = axios.create({
-  baseURL: apiUrl,
-  headers: {
-    "Content-Type": "application/json"
-  }
-});
+// const apiClient = axios.create({
+//   baseURL: apiUrl,
+//   headers: {
+//     "Content-Type": "application/json"
+//   }
+// });
 
 apiClient.interceptors.response.use(
   (response) => response,
