@@ -1,8 +1,8 @@
 
 import axios from 'axios';
-
+const apiUrl = process.env.REACT_APP_API_URL;
 const apiClient = axios.create({
-  baseURL: "http://localhost:5215/ToDoList",
+  baseURL: apiUrl,
   headers: {
     "Content-Type": "application/json"
   }
