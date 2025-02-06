@@ -1,8 +1,6 @@
 
 import axios from 'axios';
-// const apiUrl = env.REACT_APP_API_URL;
-const apiUrl = "https://practicode-3-todolist-server.onrender.com"
-;
+const apiUrl = process.env.REACT_APP_API_URL;
 console.log('API URL:', apiUrl);
 
 const apiClient = axios.create({
