@@ -9,7 +9,7 @@ build/
 dist/
 
 # Environment files
-.env
+
 .env.*.local
 
 # Editor files

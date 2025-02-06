@@ -10,6 +10,7 @@ function App() {
   //   console.log("Response from server:", todos);
   //   setTodos(todos);
   // }
+  
   async function getTodos() {
     try {
       const todosResponse = await service.getTasks();
