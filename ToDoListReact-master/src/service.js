@@ -18,7 +18,7 @@ export default {
   getTasks: async () => {
     console.log('get tasks');
     
-    const result = await fetch('https://practicode-3-todolist-server.onrender.com/ToDoList');
+    const result = await fetch('https://github.com/ToDoList');
     const data = await result.json()
     console.log('data',data);
     return data;
