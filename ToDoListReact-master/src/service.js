@@ -18,7 +18,7 @@ export default {
   getTasks: async () => {
     console.log();
     
-    const result = await axios.get('/ToDoList');
+    const result = await axios.get('https://practicode-3-todolist-server.onrender.com/ToDoList');
     return result.data;
   },
 
