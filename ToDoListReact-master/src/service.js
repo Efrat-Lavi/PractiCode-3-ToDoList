@@ -16,10 +16,13 @@ axios.interceptors.response.use(
 );
 export default {
   getTasks: async () => {
-    console.log();
+    console.log('get tasks);
     
-    const result = await axios.get('https://practicode-3-todolist-server.onrender.com/ToDoList');
-    return result.data;
+    const result = await fetch('https://practicode-3-todolist-server.onrender.com/ToDoList');
+    const data = await result.json()
+    console.log('data',data);
+    return data;
+    //return result.data;
   },
 
   addTask: async (name) => {
