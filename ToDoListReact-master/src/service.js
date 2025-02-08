@@ -1,8 +1,8 @@
 
 import axios from 'axios';
 
-//axios.defaults.baseURL = process.env.REACT_APP_API_URL;
-axios.defaults.baseURL = "https://practicode-3-todolist-server.onrender.com"
+axios.defaults.baseURL = process.env.REACT_APP_API_URL;
+// axios.defaults.baseURL = "https://practicode-3-todolist-server.onrender.com"
 
 console.log("AAA");
 console.log(axios.defaults.baseURL);
@@ -17,11 +17,11 @@ axios.interceptors.response.use(
 export default {
   getTasks: async () => {
     console.log('get tasks');
-    
-    const result = await fetch('https://github.com/ToDoList');
-    const data = await result.json()
-    console.log('data',data);
-    return data;
+    const result = await axios.get('/ToDoList');
+    // const result = await fetch('https://github.com/ToDoList');
+    // const data = await result.json()
+    // console.log('data',data);
+    // return data;
     //return result.data;
   },
 
