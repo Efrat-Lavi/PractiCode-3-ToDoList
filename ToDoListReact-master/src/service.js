@@ -16,7 +16,7 @@ axios.interceptors.response.use(
 );
 export default {
   getTasks: async () => {
-    console.log('get tasks);
+    console.log('get tasks');
     
     const result = await fetch('https://practicode-3-todolist-server.onrender.com/ToDoList');
     const data = await result.json()
