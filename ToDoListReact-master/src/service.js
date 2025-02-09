@@ -16,18 +16,10 @@ axios.interceptors.response.use(
 );
 export default {
   getTasks: async () => {
-    const result = await axios.get('/tasks');
-    if (Array.isArray(result.data))
-    return result.data
-    else {
-      alert("no tasks");
-      return [];
-    }
+    console.log('get tasks');
+    const result = await axios.get('/ToDoList');
+    return result.data;
   },
-  // getTasks: async () => {
-  //   console.log('get tasks');
-  //   const result = await axios.get('/ToDoList');
-  // },
 
   addTask: async (name) => {
     const result = await axios.post(`/ToDoList/${name}`);
