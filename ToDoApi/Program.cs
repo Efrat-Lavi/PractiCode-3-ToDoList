@@ -57,6 +57,7 @@ app.MapPost("/ToDoList/{name}", async (ToDoDbContext context,string name) =>
 {
     Item item = new Item();
     item.Name = name;
+    item.IsComplete = false;
     context.Items.Add(item);
     await context.SaveChangesAsync();
     return Results.Created($"/ToDoList/{item.Id}", item);
